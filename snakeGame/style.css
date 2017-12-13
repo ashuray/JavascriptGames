@@ -1,0 +1,45 @@
+
+.container {
+
+  width: 75%;
+  margin: auto;
+  background-color: #16A085 ;
+  box-shadow: 0 19px 38px 
+  rgba(0,0,0,0.30), 0 15px 12px 
+  rgba(0,0,0,0.22); 
+   margin-bottom: 0px;
+   }
+
+h1 {
+  text-align: center;
+  color: #282c34; }
+
+  h4 {
+  text-align: center;
+  color: #282c34; }
+
+canvas {
+  border-radius: 5px; }
+
+#canvas-wrap {
+	width:600px;
+    margin: auto;
+  }
+#overlay{
+	display:none;
+	color:#ffffff;
+	font-size:25px;
+	text-align:center;
+  margin: auto;
+}
+
+#overlay a{
+	display:block;
+	margin-top:10px;
+	padding:10px;
+	background:#666666;
+}
+
+#overlay a:hover{
+	background:#333333;
+}
