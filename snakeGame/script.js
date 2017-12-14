@@ -9,9 +9,8 @@ window.onload = function() {
     var cw = 15; //cell width
     var d = "right"; //direction
     var food; //food
-    var score; //score
+    var score = 0; //score
     var speed = 130;
-
     //snake array
     var snake_array;
 
@@ -23,6 +22,7 @@ window.onload = function() {
         score = 0;
         if (typeof game_loop != "undefined") clearInterval(game_loop);
         game_loop = setInterval(paint, speed);
+        return ;  
     }
      
     init();
@@ -63,8 +63,10 @@ window.onload = function() {
         //collide code
         if(nx == -1 || nx == w/cw || ny == -1 || ny == h/cw || check_collision(nx,ny,snake_array))
         {
+            
             document.getElementById("final_score").innerHTML = score;
             document.getElementById("overlay").style.display = "block";
+            clearInterval(game_loop);
             return ;
         }
 
@@ -95,6 +97,16 @@ window.onload = function() {
         }
 
         paint_cell(food.x,food.y);
+        
+        document.onkeydown = function(event)
+             {
+        var key = event.which;
+        if(key == "37" && d!= "right") d = "left";
+        else if(key == "38" && d!= "down") d = "up";
+        else if(key == "39" && d!= "left") d = "right";
+        else if(key == "40" && d != "up") d = "down";
+            }
+
     }
 
     function paint_cell(x,y)
@@ -113,14 +125,7 @@ window.onload = function() {
         return false;
     }
 
-    document.onkeydown = function(event)
-    {
-        var key = event.which;
-        if(key == "37" && d!= "right") d = "left";
-        else if(key == "38" && d!= "down") d = "up";
-        else if(key == "39" && d!= "left") d = "right";
-        else if(key == "40" && d != "up") d = "down";
-    }
+    
 
     
 }
