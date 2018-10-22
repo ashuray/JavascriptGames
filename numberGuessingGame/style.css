@@ -1,0 +1,38 @@
+#title {
+  text-align: center;
+}
+
+#game {
+  width: 40%;
+  height: 300px;
+  border: 2px solid pink;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.text {
+  text-align: center;
+  margin-top: 40px;
+}
+
+#input {
+  width: 20%;
+  height: 30px;
+  border: 1px solid pink;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 40px;
+}
+
+#button {
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 30px;
+}
+
+#result {
+  text-align: center;
+  color: pink;
+  margin-top: 50px;
+}
