@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Simon</title>
+</head>
+<body>
+    <h1>Simon</h1>
+<div class="game-console">
+    <div class="panel-1">
+        <h2>Instructions:</h2>
+        <p class="message"> Watch the lights carefully and repeat the sequence by pressing the buttons in the correct order. Select your game mode below.</p>
+    </div>
+    <div class="panel-2">
+            <button id="impact">Normal</button>
+            <button id="alien">Alien</button>
+            <button id="ascension">Ascension</button>
+            <div> </div>
+            <div id="level-display">
+                    Level: <div class="level-counter">1</div>
+                </div>
+    </div>
+<div class="panel-3">
+<div class="game-container">
+    <div id="green" class="button"></div>
+    <div id="red" class="button"></div>
+    <div id="yellow" class="button"></div>
+    <div id="blue" class="button"></div>
+    <div class="center-button">
+    </div>
+</div>
+</div>
+</div>
+
+<audio data-key="gr" src="./sounds/Space-note-root.wav"></audio>
+<audio data-key="re" src="./sounds/Space-note-3rd.wav"></audio>
+<audio data-key="ye" src="./sounds/Space-note-5th.wav"></audio>
+<audio data-key="bl" src="./sounds/Space-note-7th.wav"></audio>
+<audio data-key="gr-a" src="./sounds/alien-1-short.wav"></audio>
+<audio data-key="re-a" src="./sounds/alien-2-short.wav"></audio>
+<audio data-key="ye-a" src="./sounds/alien-3-short.wav"></audio>
+<audio data-key="bl-a" src="./sounds/alien-4-short.wav"></audio>
+
+
+<div id="alien-hint" style="color: black;">Alien Mode: repeat the pattern backwards</div>
+<div class="hint-buttons">
+    <button onclick="hint()" id="hint">👽 Hint</button>
+</div>
+<script>
+function hint() {
+    document.querySelector('#alien-hint').style.color='white'
+}
+</script>
+<footer id="footer">        
+    <ul class="icons">
+        <li><a href="https://github.com/MarissaWood" class="fa fa-github"></a></li>
+    </ul>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

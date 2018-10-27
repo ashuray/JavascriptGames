@@ -1,0 +1,224 @@
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+    justify-content: space-around;
+}
+
+p {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 30px;
+}
+.game-container {
+    position:relative;
+	width:500px;
+	height:500px;
+    margin:0 auto;
+    margin-top: 30px;
+    border: solid 1px black;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.button {
+	position: absolute;
+	width: 235px;
+	height: 235px;
+    margin: 10px;
+    transition: all 0.11s ease;
+}
+
+#green {
+    top: 0;
+    left: 0;
+    background: rgb(57, 255, 20);
+    border-radius:100% 0 0 0;
+}
+
+#red {
+    background: rgb(255, 69, 0);
+    top: 0;
+    right: 0;
+    border-radius:0 100% 0 0;
+}
+
+#yellow {
+    background: #FFFF33;
+    bottom: 0;
+    left: 0;
+    border-radius:0 0 0 100%;
+}
+
+#blue {
+    background: rgb(0, 127, 255);
+    bottom: 0;
+    right: 0;
+    border-radius:0 0 100% 0;
+}
+
+.center-button {
+    position:absolute;
+    background-color: white;
+    border: 10px solid lightgray;
+    width:200px;
+    height:200px;
+    top:137px;
+    left:137px;
+    border-radius:50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.game-console {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 260px 590px;
+    grid-template-rows: 290px 270px;
+    background: white; 
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+
+.panel-1 {
+    grid-row:1;
+    grid-column: 1;
+    background: black;
+}
+
+
+.panel-2 {
+    grid-column: 1;
+    grid-row: 2;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.panel-3 {
+    grid-column:2;
+    grid-row: 1 / span 2;
+    background: black;
+}
+
+#impact, #alien, #ascension {
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    margin: 5px 17.5px;
+}
+
+.clicked {
+    transform: 1.1;
+    opacity: 0.7;
+    box-shadow: inset 0 0 10px 10px #000000;
+}
+
+.success {
+    box-shadow: inset 0 0 10px 10px rgb(57, 255, 20);
+    transition: 0.4s;
+}
+
+.mode {
+    background-color: rgb(57, 255, 20);
+    border: 3px solid black;
+}
+
+#level-display {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    color: white;
+    position: inherit;
+    bottom: 1px;
+    padding-left: 20px;
+}
+
+.message {
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 30px;
+    text-align: center;
+}
+
+.level-counter {
+    font-family: 'Courier New', Courier, monospace;
+    display: inline;
+}
+
+#footer {
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+    margin: 10pxs;
+    color: rgb(70,70,70);
+}
+
+ul.icons {
+    cursor: default;
+    padding: 0;
+    border: none;
+}
+
+
+.fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-github {
+    background: #333;
+    color: white;
+}
+  
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+  
+.fa-angellist {
+    background: #ff6600;
+    color: white;
+}
+
+.hint-buttons {
+    display: flex;
+    justify-content: center;
+}
+#hint {
+    width: 100px;
+}
