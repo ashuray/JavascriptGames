@@ -3,7 +3,6 @@ function generateRandomNumber() {
 }
 
 let secretNumber = generateRandomNumber();
-console.log(secretNumber);
 
 function checkNumber() {
   let value = document.getElementById('input').value;
